@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GizlilikPolitikasiRouteImport } from './routes/gizlilik-politikasi'
 import { Route as IadePolitikasiRouteImport } from './routes/iade-politikasi'
+import { Route as KisisellestirRouteImport } from './routes/kisisellestir'
 import { Route as MesafeliSatisSozlesmesiRouteImport } from './routes/mesafeli-satis-sozlesmesi'
 import { Route as SssRouteImport } from './routes/sss'
 
@@ -30,6 +31,11 @@ const IadePolitikasiRoute = IadePolitikasiRouteImport.update({
   path: '/iade-politikasi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KisisellestirRoute = KisisellestirRouteImport.update({
+  id: '/kisisellestir',
+  path: '/kisisellestir',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MesafeliSatisSozlesmesiRoute = MesafeliSatisSozlesmesiRouteImport.update({
   id: '/mesafeli-satis-sozlesmesi',
   path: '/mesafeli-satis-sozlesmesi',
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/gizlilik-politikasi': typeof GizlilikPolitikasiRoute
   '/iade-politikasi': typeof IadePolitikasiRoute
+  '/kisisellestir': typeof KisisellestirRoute
   '/mesafeli-satis-sozlesmesi': typeof MesafeliSatisSozlesmesiRoute
   '/sss': typeof SssRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/gizlilik-politikasi': typeof GizlilikPolitikasiRoute
   '/iade-politikasi': typeof IadePolitikasiRoute
+  '/kisisellestir': typeof KisisellestirRoute
   '/mesafeli-satis-sozlesmesi': typeof MesafeliSatisSozlesmesiRoute
   '/sss': typeof SssRoute
 }
@@ -60,6 +68,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/gizlilik-politikasi': typeof GizlilikPolitikasiRoute
   '/iade-politikasi': typeof IadePolitikasiRoute
+  '/kisisellestir': typeof KisisellestirRoute
   '/mesafeli-satis-sozlesmesi': typeof MesafeliSatisSozlesmesiRoute
   '/sss': typeof SssRoute
 }
@@ -69,6 +78,7 @@ export interface FileRouteTypes {
     | '/'
     | '/gizlilik-politikasi'
     | '/iade-politikasi'
+    | '/kisisellestir'
     | '/mesafeli-satis-sozlesmesi'
     | '/sss'
   fileRoutesByTo: FileRoutesByTo
@@ -76,6 +86,7 @@ export interface FileRouteTypes {
     | '/'
     | '/gizlilik-politikasi'
     | '/iade-politikasi'
+    | '/kisisellestir'
     | '/mesafeli-satis-sozlesmesi'
     | '/sss'
   id:
@@ -83,6 +94,7 @@ export interface FileRouteTypes {
     | '/'
     | '/gizlilik-politikasi'
     | '/iade-politikasi'
+    | '/kisisellestir'
     | '/mesafeli-satis-sozlesmesi'
     | '/sss'
   fileRoutesById: FileRoutesById
@@ -91,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GizlilikPolitikasiRoute: typeof GizlilikPolitikasiRoute
   IadePolitikasiRoute: typeof IadePolitikasiRoute
+  KisisellestirRoute: typeof KisisellestirRoute
   MesafeliSatisSozlesmesiRoute: typeof MesafeliSatisSozlesmesiRoute
   SssRoute: typeof SssRoute
 }
@@ -118,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IadePolitikasiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kisisellestir': {
+      id: '/kisisellestir'
+      path: '/kisisellestir'
+      fullPath: '/kisisellestir'
+      preLoaderRoute: typeof KisisellestirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mesafeli-satis-sozlesmesi': {
       id: '/mesafeli-satis-sozlesmesi'
       path: '/mesafeli-satis-sozlesmesi'
@@ -139,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GizlilikPolitikasiRoute: GizlilikPolitikasiRoute,
   IadePolitikasiRoute: IadePolitikasiRoute,
+  KisisellestirRoute: KisisellestirRoute,
   MesafeliSatisSozlesmesiRoute: MesafeliSatisSozlesmesiRoute,
   SssRoute: SssRoute,
 }
