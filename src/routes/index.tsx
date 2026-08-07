@@ -185,7 +185,7 @@ const gallery = [
 function Index() {
   const [sent, setSent] = useState(false);
   const [config, setConfig] = useState<LeafConfig>(defaultConfig);
-  const [openFaq, setOpenFaq] = useState<string | null>(faqs[0].q);
+  const [openFaq, setOpenFaq] = useState<string | null>(faqs[0]?.q ?? null);
 
   return (
     <div className="bg-background">
