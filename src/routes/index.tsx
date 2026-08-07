@@ -22,7 +22,9 @@ import {
   Star,
 } from "lucide-react";
 
+import { SiteFooter } from "@/components/site";
 import heroLeaf from "@/assets/hero-leaf.jpg";
+
 import gQr from "@/assets/g-qr.jpg";
 import gFrame from "@/assets/g-frame.jpg";
 import gBox from "@/assets/g-box.jpg";
