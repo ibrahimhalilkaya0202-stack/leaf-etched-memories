@@ -10,33 +10,89 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GizlilikPolitikasiRouteImport } from './routes/gizlilik-politikasi'
+import { Route as IadePolitikasiRouteImport } from './routes/iade-politikasi'
+import { Route as MesafeliSatisSozlesmesiRouteImport } from './routes/mesafeli-satis-sozlesmesi'
+import { Route as SssRouteImport } from './routes/sss'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GizlilikPolitikasiRoute = GizlilikPolitikasiRouteImport.update({
+  id: '/gizlilik-politikasi',
+  path: '/gizlilik-politikasi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IadePolitikasiRoute = IadePolitikasiRouteImport.update({
+  id: '/iade-politikasi',
+  path: '/iade-politikasi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MesafeliSatisSozlesmesiRoute = MesafeliSatisSozlesmesiRouteImport.update({
+  id: '/mesafeli-satis-sozlesmesi',
+  path: '/mesafeli-satis-sozlesmesi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SssRoute = SssRouteImport.update({
+  id: '/sss',
+  path: '/sss',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/gizlilik-politikasi': typeof GizlilikPolitikasiRoute
+  '/iade-politikasi': typeof IadePolitikasiRoute
+  '/mesafeli-satis-sozlesmesi': typeof MesafeliSatisSozlesmesiRoute
+  '/sss': typeof SssRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/gizlilik-politikasi': typeof GizlilikPolitikasiRoute
+  '/iade-politikasi': typeof IadePolitikasiRoute
+  '/mesafeli-satis-sozlesmesi': typeof MesafeliSatisSozlesmesiRoute
+  '/sss': typeof SssRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/gizlilik-politikasi': typeof GizlilikPolitikasiRoute
+  '/iade-politikasi': typeof IadePolitikasiRoute
+  '/mesafeli-satis-sozlesmesi': typeof MesafeliSatisSozlesmesiRoute
+  '/sss': typeof SssRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/gizlilik-politikasi'
+    | '/iade-politikasi'
+    | '/mesafeli-satis-sozlesmesi'
+    | '/sss'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/gizlilik-politikasi'
+    | '/iade-politikasi'
+    | '/mesafeli-satis-sozlesmesi'
+    | '/sss'
+  id:
+    | '__root__'
+    | '/'
+    | '/gizlilik-politikasi'
+    | '/iade-politikasi'
+    | '/mesafeli-satis-sozlesmesi'
+    | '/sss'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GizlilikPolitikasiRoute: typeof GizlilikPolitikasiRoute
+  IadePolitikasiRoute: typeof IadePolitikasiRoute
+  MesafeliSatisSozlesmesiRoute: typeof MesafeliSatisSozlesmesiRoute
+  SssRoute: typeof SssRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +104,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gizlilik-politikasi': {
+      id: '/gizlilik-politikasi'
+      path: '/gizlilik-politikasi'
+      fullPath: '/gizlilik-politikasi'
+      preLoaderRoute: typeof GizlilikPolitikasiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iade-politikasi': {
+      id: '/iade-politikasi'
+      path: '/iade-politikasi'
+      fullPath: '/iade-politikasi'
+      preLoaderRoute: typeof IadePolitikasiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mesafeli-satis-sozlesmesi': {
+      id: '/mesafeli-satis-sozlesmesi'
+      path: '/mesafeli-satis-sozlesmesi'
+      fullPath: '/mesafeli-satis-sozlesmesi'
+      preLoaderRoute: typeof MesafeliSatisSozlesmesiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sss': {
+      id: '/sss'
+      path: '/sss'
+      fullPath: '/sss'
+      preLoaderRoute: typeof SssRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GizlilikPolitikasiRoute: GizlilikPolitikasiRoute,
+  IadePolitikasiRoute: IadePolitikasiRoute,
+  MesafeliSatisSozlesmesiRoute: MesafeliSatisSozlesmesiRoute,
+  SssRoute: SssRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
