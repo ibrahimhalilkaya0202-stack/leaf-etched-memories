@@ -2,6 +2,31 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, MessageCircle, Mail } from "lucide-react";
 import type { ReactNode } from "react";
 
+export function FloatingContact() {
+  return (
+    <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
+      <a
+        href="https://wa.me/905000000000"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="WhatsApp ile yazın"
+        className="grid h-12 w-12 place-items-center rounded-full bg-forest text-cream shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-forest-deep"
+      >
+        <MessageCircle className="h-5 w-5" strokeWidth={1.5} />
+      </a>
+      <a
+        href="https://instagram.com/timoria"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram hesabımız"
+        className="grid h-12 w-12 place-items-center rounded-full border border-gold/50 bg-ink/90 text-gold shadow-lg backdrop-blur transition-transform hover:-translate-y-0.5"
+      >
+        <Instagram className="h-5 w-5" strokeWidth={1.5} />
+      </a>
+    </div>
+  );
+}
+
 export function SiteHeader() {
   return (
     <header className="border-b border-white/10 bg-ink">
@@ -9,13 +34,19 @@ export function SiteHeader() {
         <Link to="/" className="min-w-0">
           <span className="font-display text-2xl tracking-[0.35em] text-gold">TIMORIA</span>
         </Link>
-        <Link to="/" className="btn-outline-gold !px-5 !py-2.5 shrink-0">
-          Ana Sayfa
-        </Link>
+        <div className="flex shrink-0 items-center gap-3">
+          <Link to="/" className="hidden text-[0.7rem] uppercase tracking-[0.22em] text-cream/70 transition-colors hover:text-gold sm:inline">
+            Ana Sayfa
+          </Link>
+          <Link to="/kisisellestir" className="btn-gold !px-5 !py-2.5">
+            Kişiselleştir
+          </Link>
+        </div>
       </nav>
     </header>
   );
 }
+
 
 export function SiteFooter() {
   return (
