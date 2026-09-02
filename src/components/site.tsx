@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MessageCircle, Youtube } from "lucide-react";
+import { Instagram, Mail, MessageCircle, Youtube } from "lucide-react";
 import type { ReactNode, SVGProps } from "react";
 
 export function TikTokIcon(props: SVGProps<SVGSVGElement>) {
@@ -45,7 +45,7 @@ export function SiteHeader() {
           </Link>
           <div className="hidden items-center gap-2 md:flex">
             <a
-              href="https://instagram.com/yourhandle"
+              href="https://instagram.com/timoriadesign"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -54,7 +54,7 @@ export function SiteHeader() {
               <Instagram className="h-4 w-4" strokeWidth={1.5} />
             </a>
             <a
-              href="https://tiktok.com/@yourhandle"
+              href="https://www.tiktok.com/@timoriadesign?_r=1&_t=ZS-98wH5IhPgX6"
               target="_blank"
               rel="noreferrer"
               aria-label="TikTok"
@@ -63,7 +63,7 @@ export function SiteHeader() {
               <TikTokIcon className="h-4 w-4" />
             </a>
             <a
-              href="https://youtube.com/@yourhandle"
+              href="https://youtube.com/@ibrahimhalilkaya684?si=thdX1dcEicYu4B-B"
               target="_blank"
               rel="noreferrer"
               aria-label="YouTube"
@@ -100,14 +100,21 @@ export function SiteFooter() {
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
             Zaman geçer, anılar kalır. Kişiye özel lazer gravür hediyeler.
           </p>
+          <a
+            href="mailto:timoria.design@gmail.com"
+            className="mt-4 inline-flex items-center gap-2 text-sm text-cream/80 transition-colors hover:text-gold"
+          >
+            <Mail className="h-4 w-4" strokeWidth={1.5} />
+            timoria.design@gmail.com
+          </a>
           <div className="mt-5 flex gap-4">
-            <a href="https://instagram.com/yourhandle" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-colors hover:text-gold">
+            <a href="https://instagram.com/timoriadesign" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-colors hover:text-gold">
               <Instagram className="h-5 w-5" strokeWidth={1.3} />
             </a>
-            <a href="https://tiktok.com/@yourhandle" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-colors hover:text-gold">
+            <a href="https://www.tiktok.com/@timoriadesign?_r=1&_t=ZS-98wH5IhPgX6" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-colors hover:text-gold">
               <TikTokIcon className="h-5 w-5" />
             </a>
-            <a href="https://youtube.com/@yourhandle" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-colors hover:text-gold">
+            <a href="https://youtube.com/@ibrahimhalilkaya684?si=thdX1dcEicYu4B-B" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-colors hover:text-gold">
               <Youtube className="h-5 w-5" strokeWidth={1.3} />
             </a>
             <a href="https://wa.me/905432787965" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="transition-colors hover:text-gold">
