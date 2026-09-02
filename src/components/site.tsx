@@ -43,6 +43,44 @@ export function SiteHeader() {
           <Link to="/" className="hidden text-[0.7rem] uppercase tracking-[0.22em] text-cream/70 transition-colors hover:text-gold sm:inline">
             Ana Sayfa
           </Link>
+          <div className="hidden items-center gap-2 md:flex">
+            <a
+              href="https://instagram.com/yourhandle"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="grid h-8 w-8 place-items-center rounded-full text-cream/70 transition-colors hover:bg-gold/10 hover:text-gold"
+            >
+              <Instagram className="h-4 w-4" strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://tiktok.com/@yourhandle"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+              className="grid h-8 w-8 place-items-center rounded-full text-cream/70 transition-colors hover:bg-gold/10 hover:text-gold"
+            >
+              <TikTokIcon className="h-4 w-4" />
+            </a>
+            <a
+              href="https://youtube.com/@yourhandle"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+              className="grid h-8 w-8 place-items-center rounded-full text-cream/70 transition-colors hover:bg-gold/10 hover:text-gold"
+            >
+              <Youtube className="h-4 w-4" strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://wa.me/905XXXXXXXXX"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="grid h-8 w-8 place-items-center rounded-full text-cream/70 transition-colors hover:bg-gold/10 hover:text-gold"
+            >
+              <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
+            </a>
+          </div>
           <Link to="/kisisellestir" className="btn-gold !px-5 !py-2.5">
             Kişiselleştir
           </Link>
