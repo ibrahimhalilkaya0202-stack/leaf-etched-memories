@@ -494,7 +494,7 @@ function Index() {
               <div className="gold-rule mt-6" />
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="https://wa.me/905000000000"
+                  href="https://wa.me/905432787965"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-gold min-h-11"
@@ -502,12 +502,18 @@ function Index() {
                   <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> WhatsApp
                 </a>
                 <a
-                  href="https://instagram.com/timoria"
+                  href="https://instagram.com/timoriadesign"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex min-h-11 items-center justify-center gap-2 rounded-sm border border-forest/30 px-8 py-[0.95rem] text-xs uppercase tracking-[0.22em] text-forest transition-colors hover:bg-forest hover:text-cream"
                 >
                   <Instagram className="h-4 w-4" strokeWidth={1.5} /> Instagram
+                </a>
+                <a
+                  href="mailto:timoria.design@gmail.com"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-sm border border-forest/30 px-8 py-[0.95rem] text-xs uppercase tracking-[0.22em] text-forest transition-colors hover:bg-forest hover:text-cream"
+                >
+                  <Mail className="h-4 w-4" strokeWidth={1.5} /> E-posta
                 </a>
               </div>
               <div className="mt-10 overflow-hidden rounded-sm border border-border">

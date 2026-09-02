@@ -74,7 +74,7 @@ function KisisellestirPage() {
                     <span className="font-display text-2xl">1.450 ₺</span>
                   </div>
                   <a
-                    href={`https://wa.me/905000000000?text=${encodeURIComponent(
+                    href={`https://wa.me/905432787965?text=${encodeURIComponent(
                       "Timoria kişiselleştirme talebim:\n" + summary,
                     )}`}
                     target="_blank"
