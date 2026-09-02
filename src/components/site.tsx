@@ -21,7 +21,7 @@ export function TikTokIcon(props: SVGProps<SVGSVGElement>) {
 export function FloatingContact() {
   return (
     <a
-      href="https://wa.me/905XXXXXXXXX"
+      href="https://wa.me/905432787965"
       target="_blank"
       rel="noreferrer"
       aria-label="WhatsApp ile yazın"
@@ -72,7 +72,7 @@ export function SiteHeader() {
               <Youtube className="h-4 w-4" strokeWidth={1.5} />
             </a>
             <a
-              href="https://wa.me/905XXXXXXXXX"
+              href="https://wa.me/905432787965"
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
@@ -110,7 +110,7 @@ export function SiteFooter() {
             <a href="https://youtube.com/@yourhandle" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-colors hover:text-gold">
               <Youtube className="h-5 w-5" strokeWidth={1.3} />
             </a>
-            <a href="https://wa.me/905XXXXXXXXX" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="transition-colors hover:text-gold">
+            <a href="https://wa.me/905432787965" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="transition-colors hover:text-gold">
               <MessageCircle className="h-5 w-5" strokeWidth={1.3} />
             </a>
           </div>
