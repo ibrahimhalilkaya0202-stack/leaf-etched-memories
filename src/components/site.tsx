@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MessageCircle, Mail } from "lucide-react";
-import type { ReactNode } from "react";
+import { Instagram, MessageCircle, Mail, Youtube } from "lucide-react";
+import type { ReactNode, SVGProps } from "react";
 
 export function FloatingContact() {
   return (
