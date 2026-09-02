@@ -101,14 +101,17 @@ export function SiteFooter() {
             Zaman geçer, anılar kalır. Kişiye özel lazer gravür hediyeler.
           </p>
           <div className="mt-5 flex gap-4">
-            <a href="https://instagram.com/timoria" aria-label="Instagram" className="transition-colors hover:text-gold">
+            <a href="https://instagram.com/yourhandle" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-colors hover:text-gold">
               <Instagram className="h-5 w-5" strokeWidth={1.3} />
             </a>
-            <a href="https://wa.me/905000000000" aria-label="WhatsApp" className="transition-colors hover:text-gold">
-              <MessageCircle className="h-5 w-5" strokeWidth={1.3} />
+            <a href="https://tiktok.com/@yourhandle" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-colors hover:text-gold">
+              <TikTokIcon className="h-5 w-5" />
             </a>
-            <a href="mailto:info@timoria.com" aria-label="E-posta" className="transition-colors hover:text-gold">
-              <Mail className="h-5 w-5" strokeWidth={1.3} />
+            <a href="https://youtube.com/@yourhandle" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-colors hover:text-gold">
+              <Youtube className="h-5 w-5" strokeWidth={1.3} />
+            </a>
+            <a href="https://wa.me/905XXXXXXXXX" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="transition-colors hover:text-gold">
+              <MessageCircle className="h-5 w-5" strokeWidth={1.3} />
             </a>
           </div>
         </div>
