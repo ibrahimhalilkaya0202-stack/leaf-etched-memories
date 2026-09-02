@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Upload, QrCode, Trash2, ImageIcon } from "lucide-react";
 
-import heroLeaf from "@/assets/hero-leaf.jpg";
+import leafAsset from "@/assets/real-leaf.jpg.asset.json";
+const heroLeaf = leafAsset.url;
 
 /** Deterministic pseudo-QR pattern for the visual preview (not a scannable code). */
 function useQrPattern(seed: string, size = 11) {
