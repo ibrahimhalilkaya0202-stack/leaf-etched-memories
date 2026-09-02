@@ -28,10 +28,13 @@ import {
 import { SiteFooter, FloatingContact } from "@/components/site";
 import { Reveal } from "@/components/reveal";
 import { LeafPreview, PersonalizerForm, defaultConfig, type LeafConfig } from "@/components/personalizer";
-import heroLeaf from "@/assets/hero-leaf.jpg";
+import heroAsset from "@/assets/real-frame.jpg.asset.json";
+import lampAsset from "@/assets/real-lamp.jpg.asset.json";
+import leafAsset from "@/assets/real-leaf.jpg.asset.json";
+const heroLeaf = heroAsset.url;
 
-import gQr from "@/assets/g-qr.jpg";
-import gFrame from "@/assets/g-frame.jpg";
+const gQr = leafAsset.url;
+const gFrame = lampAsset.url;
 import gBox from "@/assets/g-box.jpg";
 import gLeather from "@/assets/g-leather.jpg";
 import gMetal from "@/assets/g-metal.jpg";
@@ -175,8 +178,8 @@ const reviews = [
 
 const gallery = [
   { src: heroLeaf, alt: "Manolya yaprağı üzerine lazer gravür portre", label: "Yaprak Üzerine Portre" },
-  { src: gQr, alt: "QR kod işlenmiş gerçek yaprak", label: "QR Kodlu Yaprak" },
-  { src: gFrame, alt: "Çerçevelenmiş yaprak gravür tablosu", label: "Çerçeveli Yaprak" },
+  { src: gQr, alt: "Gravüre hazır gerçek doğal yaprak", label: "Gerçek Doğal Yaprak" },
+  { src: gFrame, alt: "Yaprak gravürlü LED ahşap tabanlı lamba", label: "Işıklı Yaprak Lamba" },
   { src: gBox, alt: "Premium ahşap hediye kutusu", label: "Ahşap Kutu" },
   { src: gLeather, alt: "Portre gravürlü deri kartlık", label: "Deri Gravür" },
   { src: gMetal, alt: "Lazerle işlenmiş metal bıçak yüzeyi", label: "Metal Gravür" },
