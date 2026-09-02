@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MessageCircle, Mail, Youtube } from "lucide-react";
+import { Instagram, MessageCircle, Youtube } from "lucide-react";
 import type { ReactNode, SVGProps } from "react";
 
 export function TikTokIcon(props: SVGProps<SVGSVGElement>) {
